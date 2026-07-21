@@ -13,6 +13,18 @@
     gap:5px;
     padding: 20px 10px;
     border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.hamburger.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hamburger.hide {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
 }
 
 .hammodules{
@@ -134,4 +146,36 @@
 #profilepic{
     height: 25px;
     width: 25px;
+}
+
+.navtwo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    gap:15px
+}
+
+.navsvgs h2{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.navsvgs svg{
+    height: 25px;
+    width: 25px;
+}
+
+.navsvgs{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap:3px;
+    cursor: pointer;
+}
+
+.navsvgs:hover{
+    text-decoration: underline;
+    color: red;
 }

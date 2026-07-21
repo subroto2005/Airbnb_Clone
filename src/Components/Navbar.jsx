@@ -4,18 +4,28 @@ import './Navbar.css'
 import { CiSearch } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgProfile } from "react-icons/cg";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { MdOtherHouses } from "react-icons/md";
+import { IoBed } from "react-icons/io5";
+import { PiFarmFill } from "react-icons/pi";
+import { MdPool } from "react-icons/md";
+import { FaTent } from "react-icons/fa6";
+import { MdOutlineCabin } from "react-icons/md";
+import { AiTwotoneShop } from "react-icons/ai";
+import { MdForest } from "react-icons/md";
+
 
 function Navbar() {
 const [visible,setVisible]=useState(false)
   
 return (
     <nav className='mainnav'>
-        {visible ? (<div className="hamburger">
+       <div className={`hamburger ${visible ? "show" : "hide"}`}>
                 <div className="hammodules">Login</div>
                 <div className="hammodules">Sign-up</div>
                 <div className="hammodules">List your home</div>
                 <div className="hammodules">help center</div>
-        </div>) : (<div></div>)}
+        </div>
 
         <nav className="navone">
             <div className="logo one">
@@ -35,7 +45,42 @@ return (
         </nav>
         
         <nav className="navtwo">
-
+            <div className="navsvgs">
+                <h2>Trending</h2>
+                <FaArrowTrendUp />
+            </div>
+            <div className="navsvgs">
+                <h2>Houses</h2>
+                <MdOtherHouses />
+            </div>
+            <div className="navsvgs">
+                <h2>Rooms</h2>
+                <IoBed />
+            </div>
+            <div className="navsvgs">
+                <h2>FarmHouse</h2>
+                <PiFarmFill />
+            </div>
+            <div className="navsvgs">
+                <h2>Pool Houses</h2>
+                <MdPool />
+            </div>
+            <div className="navsvgs">
+                <h2>Tent House</h2>
+                <FaTent />
+            </div>
+            <div className="navsvgs">
+                <h2>Cabins</h2>
+                <MdOutlineCabin />
+            </div>
+            <div className="navsvgs">
+                <h2>Shops</h2>
+                <AiTwotoneShop />
+            </div>
+            <div className="navsvgs">
+                <h2>Forest Houses</h2>
+                <MdForest />
+            </div>
         </nav>
     </nav>
   )
