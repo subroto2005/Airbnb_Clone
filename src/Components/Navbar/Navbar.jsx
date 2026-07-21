@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import logo from '../assets/p.jpg'
+import logo from '../../assets/p.jpg'
 import './Navbar.css'
 import { CiSearch } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";

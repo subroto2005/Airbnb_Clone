@@ -1,3 +1,7 @@
+.mainnav{
+    background-color: #fff;
+    box-shadow: 0px 1px 10px black;
+}
 .hamburger{
     position: absolute;
     width: 180px;

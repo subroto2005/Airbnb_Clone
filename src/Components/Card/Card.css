@@ -1,0 +1,37 @@
+.property{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    max-width: 90%;
+    align-items: flex-start;
+    justify-content: center;
+    gap:10px
+}
+
+.images{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow: scroll;
+}
+
+.images img{
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+
+}
+
+.propname{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.propvalue{
+    font-size: 19px;
+    color: red
+}
+
+
