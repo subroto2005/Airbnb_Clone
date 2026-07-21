@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import logo from '../assets/p.jpg'
 import './Navbar.css'
 import { CiSearch } from "react-icons/ci";
@@ -17,7 +17,24 @@ import { MdForest } from "react-icons/md";
 
 function Navbar() {
 const [visible,setVisible]=useState(false)
-  
+const [justify,setJustify]=useState('center')
+const navtwo=useRef(null)
+
+useEffect(()=>{
+    const updateJustify = () => {
+      const nav = navtwo.current;
+      if (!nav) return;
+
+      setJustify(
+        nav.scrollWidth > nav.clientWidth ? "flex-start" : "center"
+      );
+    };
+
+    updateJustify();
+    window.addEventListener("resize", updateJustify);
+
+    return () => window.removeEventListener("resize", updateJustify);
+},[])
 return (
     <nav className='mainnav'>
        <div className={`hamburger ${visible ? "show" : "hide"}`}>
@@ -35,7 +52,7 @@ return (
 
             <form onSubmit={(e)=>{e.preventDefault()}} className='one'>
                 <input type="text" placeholder='Search Destination' />
-                <button className="search">Search <CiSearch id='searchsymbol' size={25}/></button>
+                <button className="search"><span id="searchtext">Search</span> <CiSearch id='searchsymbol' size={25}/></button>
             </form>
 
             <div className="endnav one">
@@ -44,7 +61,7 @@ return (
             </div>
         </nav>
         
-        <nav className="navtwo">
+        <nav className="navtwo" ref={navtwo} style={{ justifyContent: justify }}>
             <div className="navsvgs">
                 <h2>Trending</h2>
                 <FaArrowTrendUp />

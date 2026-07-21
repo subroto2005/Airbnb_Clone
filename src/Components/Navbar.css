@@ -79,7 +79,7 @@
     background-color: red;
     padding: 7px 10px;
     color: aliceblue;
-    border: none;
+    border: 2px solid white;
     border-radius: 20px;
     font-size: 16px;
     display: flex;
@@ -101,7 +101,7 @@
 
 .endnav{
     position: relative;
-    gap:50px;
+    gap:40px;
 }
 
 .listhome{
@@ -179,3 +179,64 @@
     text-decoration: underline;
     color: red;
 }
+
+@media (max-width:1000px) {
+    .listhome{
+        display: none;
+    }
+}
+
+
+@media (max-width:800px){
+    .logo h1{
+        display: none;
+    }
+
+    .navone{
+        overflow: hidden;
+        padding: 5px;
+    }
+
+    .navtwo{
+        overflow-y: hidden;
+        overflow-x: auto;
+        
+        
+    }
+
+    .navsvgs{
+        flex-shrink: 0;
+        scrollbar-width: none;
+    }
+
+    .navone form input{
+        width: 200px;
+    }
+
+    .hamburger{
+        right: 20px;
+    }
+}
+
+@media (max-width:500px){
+    #searchtext{
+        display: none;
+    }
+
+    .navone form button{
+        padding: 7px;
+    }
+
+    .profile{
+        padding: 6px 8px;
+    }
+
+    #profilepic{
+       display: none;
+    }
+
+    .navone form{
+        gap: 8px;
+    }
+}
+
