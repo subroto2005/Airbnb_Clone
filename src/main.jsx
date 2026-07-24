@@ -7,6 +7,7 @@ import Login from './Components/Login/Login.jsx'
 import Signup from './Components/Signup/Signup.jsx'
 import Listing from './Components/Listing/Listing.jsx'
 import CardContext from './Context/CardContext.jsx'
+import Contact from './Components/Contact/Contact.jsx'
 
 const router=createBrowserRouter(
     createRoutesFromElements(
@@ -15,6 +16,8 @@ const router=createBrowserRouter(
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
             <Route path='listyourhome' element={<Listing />} />
+            <Route path='helpcenter' element={<Contact />} />
+
         </Route>
     )
 )

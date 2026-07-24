@@ -1,0 +1,89 @@
+.footer{
+    background-color: rgb(24, 22, 22);
+    padding: 10px 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.footertop{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:25px
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.rem:hover{
+    text-decoration: underline;
+}
+
+.rem{
+    font-size: 16px;
+    font-weight: 100;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.contact{
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+#contactbutton{
+    background-color: red;
+    padding: 10px 10px;
+    color: aliceblue;
+
+    border-radius: 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.16s;
+    border: none;
+}
+
+#contactbutton:hover{
+    background-color: white;
+
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footerbottom{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width:450px) {
+    .footer{
+        padding: 15px;
+    }
+    .footertop{
+        gap:40px;
+        
+        flex-direction: column;
+    }
+}

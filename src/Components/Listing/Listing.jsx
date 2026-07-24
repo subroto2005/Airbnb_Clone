@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import './Listing.css'
 import { useState } from 'react';
 import { data } from '../../Context/CardContext';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Listing() {
-
+  const navigate=useNavigate()
   const {setCards} =useContext(data)
 
   function handleSubmit(e) {
@@ -22,7 +22,7 @@ function Listing() {
 
   alert("Listing Added Suceesfully")
 
-  Navigate("/")
+  navigate("/")
 }
 
   return (

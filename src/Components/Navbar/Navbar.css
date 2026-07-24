@@ -38,14 +38,10 @@
     padding: 10px;
     cursor: pointer;
     transition: all 0.1s;
-}
-
-
-.hamburger a{
     text-decoration: none;
     color: black;
-
 }
+
 
 .hamburger a:hover{
     background-color:red;
@@ -67,6 +63,7 @@
 .navone{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
     height: 12vh;
     border-bottom: 2px solid rgb(212, 202, 202);
@@ -249,6 +246,10 @@
 
     .navone form button{
         padding: 7px;
+    }
+
+    .endnav{
+        flex: 0 1 50px;
     }
 
     .profile{
