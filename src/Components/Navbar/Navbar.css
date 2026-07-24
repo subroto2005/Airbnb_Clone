@@ -31,7 +31,7 @@
     pointer-events: none;
 }
 
-.hammodules{
+.hamburger a{
     border-radius: 20px;
     width: 100%;
     padding: 10px;
@@ -39,11 +39,29 @@
     transition: all 0.1s;
 }
 
-.hammodules:hover{
+
+.hamburger a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.hamburger a:hover{
     background-color:red;
     color: white;
-    
+
 }
+
+.hamburger a.active{
+    background-color:red;
+    color: white;
+}
+
+#logonav{
+    text-decoration: none;
+}
+
+
 
 .navone{
     display: flex;
@@ -183,6 +201,8 @@
     text-decoration: underline;
     color: red;
 }
+
+
 
 @media (max-width:1000px) {
     .listhome{

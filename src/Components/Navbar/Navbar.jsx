@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import logo from '../../assets/p.jpg'
+import { NavLink } from 'react-router-dom';
 import './Navbar.css'
 import { CiSearch } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -35,20 +36,23 @@ useEffect(()=>{
 
     return () => window.removeEventListener("resize", updateJustify);
 },[])
+
 return (
     <nav className='mainnav'>
        <div className={`hamburger ${visible ? "show" : "hide"}`}>
-                <div className="hammodules">Login</div>
-                <div className="hammodules">Sign-up</div>
-                <div className="hammodules">List your home</div>
-                <div className="hammodules">help center</div>
+            <NavLink to='/login'><div className="hammodules">Login</div></NavLink> 
+            <NavLink to='/signup'><div className="hammodules">Sign-up</div></NavLink>
+            <NavLink to='/listyourhome'><div className="hammodules">List your home</div></NavLink>
+             <NavLink to='/helpcenter'><div className="hammodules">Help Center</div></NavLink>
         </div>
 
         <nav className="navone">
+            <NavLink id="logonav" to='/'>
             <div className="logo one">
                 <img src={logo} alt="could not load image" width="45px" height="45px" />
                 <h1>Private Property Rental</h1>
             </div>
+            </NavLink>
 
             <form onSubmit={(e)=>{e.preventDefault()}} className='one'>
                 <input type="text" placeholder='Search Destination' />
