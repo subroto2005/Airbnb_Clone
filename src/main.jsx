@@ -5,6 +5,8 @@ import { createBrowserRouter, createRoutesFromChildren, createRoutesFromElements
 import Home from './Components/Home/Home.jsx'
 import Login from './Components/Login/Login.jsx'
 import Signup from './Components/Signup/Signup.jsx'
+import Listing from './Components/Listing/Listing.jsx'
+import CardContext from './Context/CardContext.jsx'
 
 const router=createBrowserRouter(
     createRoutesFromElements(
@@ -12,13 +14,14 @@ const router=createBrowserRouter(
             <Route index element={<Home />} />
             <Route path='login' element={<Login />} />
             <Route path='signup' element={<Signup />} />
+            <Route path='listyourhome' element={<Listing />} />
         </Route>
     )
 )
 
 createRoot(document.getElementById('root')).render(
-    <RouterProvider router={router}>
-        <App />
-    </RouterProvider>
- 
+    <CardContext>
+        <RouterProvider router={router} />
+
+    </CardContext>
 )

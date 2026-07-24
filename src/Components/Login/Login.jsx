@@ -3,8 +3,8 @@ import  './Login.css'
 
 function Login() {
   return (
-    <div className='login' onSubmit={(e)=>{alert('Login Successfull')}}>
-      <form>
+    <div className='login' >
+      <form onSubmit={(e)=>{e.preventDefault() ; alert('Login Successfull')}}>
         <h2>Login Page</h2>
         <div className="loginform">
           <label htmlFor="emailid">Email</label>
