@@ -1,1 +1,1 @@
-https://lighthearted-unicorn-e9a792.netlify.app/
+https://property-rental-website-sb.netlify.app/
