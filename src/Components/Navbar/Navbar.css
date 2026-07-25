@@ -248,8 +248,12 @@
         padding: 7px;
     }
 
+    .navone form input{
+        width: 180px;
+    }
+
     .endnav{
-        flex: 0 1 50px;
+        gap:0px;
     }
 
     .profile{
@@ -263,5 +267,7 @@
     .navone form{
         gap: 8px;
     }
+
+    
 }
 
