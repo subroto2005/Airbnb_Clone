@@ -94,7 +94,6 @@ function Navbar() {
             </button>
             <div
               className={`hamburger ${visible ? "show" : "hide"}`}
-              ref={hamburgerRef}
             >
               <NavLink to="/login">
                 <div className="hammodules">Login</div>

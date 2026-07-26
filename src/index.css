@@ -12,3 +12,16 @@
     width: 100%;
 }
 
+.chatbot{
+    z-index: 30;
+    position :fixed;
+    bottom: 20px;
+    right: 20px;
+
+}
+
+@media (max-width:400px) {
+       .chatbot{ 
+        right: 10px;
+       }
+}

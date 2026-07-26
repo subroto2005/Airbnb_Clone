@@ -1,0 +1,128 @@
+.messicon{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.messbox{
+    position: absolute;
+    top: -510px;
+    right: 0px;
+    width: 360px;
+    height: 500px;
+    border: 2px solid black;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.2s ease-in
+}
+
+.messbox.show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.messbox.hide{
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    
+}
+
+.messnav{
+    width: 100%;
+    height: 15%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 0px 10px;
+}
+
+.svgicon{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.topmess{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;   
+    color: white;
+}
+
+.topmess span:nth-child(1){
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.messmidlle{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.messmidlle h2{
+    font-size: 30px;
+}
+
+.messmidlle span{
+    font-size: 25px;
+    color: red;
+}
+
+.messfooter{
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.messfooter input{
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 18px;
+}
+
+.messfooter button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: red;
+    color: white;
+    transition: all ease-in 0.1s;
+}
+
+.messfooter button:hover{
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+}
+
+@media (max-width:400px) {
+    .messbox{
+
+    width: 340px;
+}
+}
