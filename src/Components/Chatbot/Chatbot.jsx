@@ -6,7 +6,7 @@ import { IoIosSend } from "react-icons/io";
 
 function Chatbot() {
 
-  const[chatvisible,setChatVisible]=useState(true)
+  const[chatvisible,setChatVisible]=useState(false)
 
   return (
 
